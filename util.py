@@ -8,8 +8,10 @@ from telegram.ext import ContextTypes
 # конвертирует объект user в строку
 def dialog_user_info_to_str(user) -> str:
     result = ""
-    map = {"name": "Имя", "sex": "Пол", "age": "Возраст", "city": "Город", "occupation": "Профессия", "hobby": "Хобби", "goals": "Цели знакомства",
-           "handsome": "Красота, привлекательность в баллах (максимум 10 баллов)", "wealth": "Доход, богатство", "annoys": "В людях раздражает"}
+    map = {"name": "Имя", "sex": "Пол", "age": "Возраст", "city": "Город", "occupation": "Профессия", "hobby": "Хобби",
+           "goals": "Цели знакомства",
+           "handsome": "Красота, привлекательность в баллах (максимум 10 баллов)", "wealth": "Доход, богатство",
+           "annoys": "В людях раздражает"}
     for key, name in map.items():
         if key in user:
             result += name + ": " + user[key] + "\n"

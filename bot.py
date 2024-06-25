@@ -1,6 +1,6 @@
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, CommandHandler, CallbackQueryHandler
 
-from testdata import tg_token, gpt_token
+from testdata import tg_token, gpt_token, start_menu
 from util import *
 from gpt import *
 
@@ -10,14 +10,7 @@ async def start(update, context):
     text = load_message("main")
     await send_photo(update, context, name="main")
     await send_text(update, context, text)
-    await show_main_menu(update, context, commands={
-        "start": "Самое главное меню бота",
-        "profile": "Генерация Tinder-профиля 🔥",
-        "new": "Сообщение для знакомства ❤️",
-        "message": "Переписка от вашего имени 💌",
-        "news": "Переписка со звездой ⭐",
-        "gpt": "Задать вопрос чату GPT 💬"
-    })
+    await show_main_menu(update, context, commands=start_menu)
 
 
 async def gpt(update, context):

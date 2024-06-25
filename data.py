@@ -1,1 +1,0 @@
-tg_token = '7232077464:AAFXpgt3PFS9atxNjV7S4HiX6_RhOPtpTNY'

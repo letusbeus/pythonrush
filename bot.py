@@ -1,6 +1,6 @@
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, CommandHandler, CallbackQueryHandler
 
-from data import tg_token
+from testdata import tg_token, gpt_token
 from util import *
 
 
